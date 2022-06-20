@@ -19,6 +19,9 @@ $crocchette = new Cibo('Crocchette', '8€', 'Crocchette per cani');
 $carne = new Cibo('Carne in scatola', '3€', 'Carne in scatola per cani');
 
 
+$today = date("Y-m-d");
+
+
 ?>
 
 
@@ -37,7 +40,7 @@ $carne = new Cibo('Carne in scatola', '3€', 'Carne in scatola per cani');
 
   <?php
 
-  if ($paolo->cardValidity === true) {
+  if ($paolo->cardValidity >= $today) {
     echo "{$paolo->getName()} ha messo nel carrello {$crocchette->getName()} per un prezzo di {$crocchette->getPrice()} ed ha uno sconto di {$paolo->getDiscount()}€";
   } else {
     echo 'Mi dispiace, la tua carta è scaduta';

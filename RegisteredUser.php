@@ -6,7 +6,7 @@ class RegisteredUser extends User
 {
 
   private $cardNumber;
-  public $cardValidity = true;
+  public $cardValidity = '2026-04-08';
 
 
   public function __construct($_name, $_lastname, $_cardNumber)
