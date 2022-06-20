@@ -6,14 +6,13 @@ class RegisteredUser extends User
 {
 
   private $cardNumber;
-  private $cardValidity;
+  public $cardValidity = true;
 
 
-  public function __construct($_name, $_lastname, $_cardNumber, $_cardValidity)
+  public function __construct($_name, $_lastname, $_cardNumber)
   {
 
     $this->cardNumber = $_cardNumber;
-    $this->cardValidity = $_cardValidity;
 
     $this->setDiscount();
 
@@ -35,7 +34,3 @@ class RegisteredUser extends User
     $this->cardNumber;
   }
 }
-
-$paolo = new RegisteredUser('Paolo', 'Rossi', 0151515, '12-02-2024');
-
-var_dump($paolo);

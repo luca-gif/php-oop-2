@@ -41,4 +41,9 @@ class User
   {
     return $this->creditCard;
   }
+
+  public function getDiscount()
+  {
+    return $this->discount;
+  }
 }
